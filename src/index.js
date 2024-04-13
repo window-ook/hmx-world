@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import NotFound from './pages/NotFound';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
-import UploadProduct from './pages/UploadProduct';
-import Cart from './pages/Cart';
+import Carts from './pages/Carts';
 import Login from './pages/Login';
+import NewProducts from './pages/NewProducts';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -19,12 +18,11 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: '/home', element: <Home /> },
+      { path: '/', element: <Home /> },
 
-      { path: '/cart', element: <Cart /> },
+      { path: '/carts', element: <Carts /> },
       { path: '/products', element: <Products /> },
-      { path: '/products/:productId', element: <ProductDetail /> },
-      { path: '/products/upload', element: <UploadProduct /> },
+      { path: '/products/new', element: <NewProducts /> },
 
       { path: '/login', element: <Login /> },
     ],

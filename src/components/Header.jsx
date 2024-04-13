@@ -6,7 +6,7 @@ export default function Header() {
     <div className="flex flex-row justify-between mx-4">
       <div>
         {/* 쇼피 로고 */}
-        <Link to="/home">
+        <Link to="/">
           <img
             src="./img/logo.png"
             alt="logo"
@@ -18,15 +18,15 @@ export default function Header() {
       <div className="space-x-3">
         {/* products : 상품 */}
         <Link to="/products">
-          <span>products</span>
+          <span>Products</span>
         </Link>
         {/* 장바구니 아이콘 */}
-        <Link to="/cart">
-          <span>Cart</span>
+        <Link to="/carts">
+          <span>Carts</span>
         </Link>
         {/* Login */}
         <Link to="/login">
-          <span>products</span>
+          <span>Login</span>
         </Link>
       </div>
     </div>
