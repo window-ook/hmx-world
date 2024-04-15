@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function Carts() {
+export default function MyCart() {
   return <>Carts</>;
 }

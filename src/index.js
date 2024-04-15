@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import Products from './pages/Products';
-import Carts from './pages/Carts';
+import AllProducts from './pages/AllProducts';
+import MyCart from './pages/MyCart';
 import Login from './pages/Login';
-import NewProducts from './pages/NewProducts';
+import NewProduct from './pages/NewProduct';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ProductDetail from './pages/ProductDetail';
 
 const router = createBrowserRouter([
   {
@@ -20,9 +21,10 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: '/', element: <Home /> },
 
-      { path: '/carts', element: <Carts /> },
-      { path: '/products', element: <Products /> },
-      { path: '/products/new', element: <NewProducts /> },
+      { path: '/products', element: <AllProducts /> },
+      { path: '/products/new', element: <NewProduct /> },
+      { path: '/products/:id', element: <ProductDetail /> },
+      { path: '/carts', element: <MyCart /> },
 
       { path: '/login', element: <Login /> },
     ],
