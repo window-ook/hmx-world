@@ -8,12 +8,12 @@ import { useAuthContext } from './context/AuthContext';
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
   return (
-    <header className="flex justify-between border-b border-gray-300">
+    <header className="flex justify-between border-b border-gray-300 mb-2">
       <Link to="/">
         <img
           src="logo.png"
           alt="logo"
-          style={{ width: '150px', height: '150px' }}
+          style={{ width: '250px', height: '250px' }}
         ></img>
       </Link>
 
