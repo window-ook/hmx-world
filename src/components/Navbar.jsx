@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaRegPenToSquare } from 'react-icons/fa6';
 import Button from './ui/Button';
 import User from './User';
-import { useAuthContext } from './context/AuthContext';
+import { useAuthContext } from '../context/AuthContext';
+import CartStatus from './CartStatus';
 
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
@@ -19,7 +20,11 @@ export default function Navbar() {
 
       <nav className="flex items-center gap-4 font-semibold">
         <Link to="/products">Products</Link>
-        {user && <Link to="/carts">Carts</Link>}
+        {user && (
+          <Link to="/carts">
+            <CartStatus />
+          </Link>
+        )}
         {user && user.isAdmin && (
           <Link to="/products/new" className="text-2xl">
             <FaRegPenToSquare />
@@ -27,9 +32,9 @@ export default function Navbar() {
         )}
         {user && <User user={user} />}
         {!user ? (
-          <Button text={'Login'} onClick={login} />
+          <Button text={'로그인'} onClick={login} />
         ) : (
-          <Button text={'Logout'} onClick={logout} />
+          <Button text={'로그아웃'} onClick={logout} />
         )}
       </nav>
     </header>
