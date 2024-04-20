@@ -1,6 +1,6 @@
 # 🛍️ Shoppy Switches - HMX WORLD
 
-![alt text](image.png)
+![홈화면](./public/thumbnail.png)
 
 ## ⌨️ HMX 스위치들을 구매할 수 있는 쇼핑몰 (실제 결제 X)
 
