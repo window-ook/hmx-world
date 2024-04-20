@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 🛍️ Shoppy Switches - HMX WORLD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](image.png)
 
-## Available Scripts
+## ⌨️ HMX 스위치들을 구매할 수 있는 쇼핑몰 (실제 결제 X)
 
-In the project directory, you can run:
+> 개발 기간 : 2024.04.05 ~ 2024.04.20
 
-### `yarn start`
+> 추후 디자인 및 UI 개선 예정
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🥞 Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://img.shields.io/badge/React.js-61DAFB?style=flat-square&logo=react&logoColor=black">
 
-### `yarn test`
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat-square&logo=TailwindCSS&logoColor=white">
 
-### `yarn build`
+<img src="https://img.shields.io/badge/React Router-white?style=flat-square&logo=reactrouter&logoColor=CA4245">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://img.shields.io/badge/React Query-FF4154?style=flat-square&logo=reactquery&logoColor=white">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white">
 
-### `yarn eject`
+## 💡 HMX WORLD에 구현한 기술
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🌱 Firebase를 이용하여 Google 계정을 통한 로그인
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🌱 Admin 권한이 있는 유저는 상품 등록
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Cloudinary와 Firebase를 사용하여 데이터 저장과 불러오기
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🌱 로그인 한 유저는 장바구니에 상품 추가 가능
 
-## Learn More
+- Firebase를 사용하여 데이터 저장과 불러오기
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🌱 useCart, useProducts 같은 커스텀 훅을 사용
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- UI와 비즈니스 로직을 담은 컴포넌트 간의 모듈화를 추구했습니다.
 
-### Code Splitting
+🌱 로그인하지 않은 사용자의 장바구니, 상품 등록 페이지 URL 접근을 차단
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- ProtectedRoute
 
-### Analyzing the Bundle Size
+🌱 Context API를 사용하여 유저 정보 관리
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 전역 상태 관리 및 조회 (user, login, logout)
