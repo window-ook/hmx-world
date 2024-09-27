@@ -1,13 +1,13 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuthContext } from '../context/AuthContext';
 import { FaRegPenToSquare } from 'react-icons/fa6';
 import Button from './ui/Button';
 import User from './User';
-import { useAuthContext } from '../context/AuthContext';
 import CartStatus from './CartStatus';
 
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
+
   return (
     <header className="flex justify-between border-b border-gray-300 mb-2">
       <Link to="/">

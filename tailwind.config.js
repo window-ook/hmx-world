@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: '#F96162',
+        brand: '#26f0b0',
       },
       backgroundImage: {
-        banner: `url('../public/images/banner.jpg')`,
+        banner: `url('../public/images/banner.webp')`,
+      },
+      fontFamily: {
+        jalnan: ['yg-jalnan'],
       },
     },
   },

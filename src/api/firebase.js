@@ -9,7 +9,6 @@ import {
 } from 'firebase/auth';
 import { getDatabase, ref, get, set, remove } from 'firebase/database';
 
-// .env에 value 저장되어있음 🌱
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -21,16 +20,15 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
+
 export function login() {
   signInWithPopup(auth, provider).catch(console.error);
 }
 
-// 🙆🏻‍♂️ 로그아웃
 export function logout() {
   signOut(auth).catch(console.error);
 }
 
-// 🙆🏻‍♂️ 유저 상태 업데이트
 export function onUserStateChange(callback) {
   onAuthStateChanged(auth, async (user) => {
     const updatedUser = user ? await adminUser(user) : null;
@@ -38,20 +36,20 @@ export function onUserStateChange(callback) {
   });
 }
 
-// 🙆🏻‍♂️ 어드민 유저 확인
+// 어드민 유저 확인
 async function adminUser(user) {
   return get(ref(database, 'admins')) //
     .then((snapshot) => {
       if (snapshot.exists()) {
         const admins = snapshot.val();
-        const isAdmin = admins.includes(user.uid); // uid 값이 admin에 있는지
+        const isAdmin = admins.includes(user.uid);
         return { ...user, isAdmin };
       }
       return user;
     });
 }
 
-// 🙆🏻‍♂️ 새로운 상품 등록
+// 새로운 상품 등록
 export async function addNewProduct(product, imageUrl) {
   const id = uuid();
   return set(ref(database, `products/${uuid()}`), {

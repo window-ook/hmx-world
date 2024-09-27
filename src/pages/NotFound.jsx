@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function NotFound() {
-  return <>Not Found : Error</>;
+  return <>잘못된 페이지입니다.</>;
 }
